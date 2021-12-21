@@ -1,15 +1,17 @@
-# Basic Sample Hardhat Project
+# How to Mint 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+## Step 1 - Deploy Contract
+deploy contract with scripts and get contract address
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## Step 2 - Mint
+1. upload art with pinata
+2. get uploaded art's ipfs url
+3. make metadata json file with below information
+```json
+ { "name" : "name of art",
+    "description" : "description of art",
+    "image" : "art's ipfs url"
+ }
+ ```
+ 4. upload metadata json file with pinata
+ 5. mint art with mint scripts and uploaded metadata json file's ipfs url as URI variable value
